@@ -9,9 +9,7 @@ import argparse
 parser = argparse.ArgumentParser(description='This script formats the SILVA db so it can be used with VSEARCH for taxonomy classification.')
 
 parser.add_argument('--fasta', help='Your database in fasta format.')
-
 parser.add_argument('--taxonomy', help='Corresponding taxonomy (7-levels).')
-vsearch --sintax tmp.mismatches.concatenated.sub10k.fasta --db /home/db/phyloFlash/132/SILVA_SSU.noLSU.masked.trimmed.udb --tabbedout tmp.mismatches.concatenated.sub10k.testVSEARCH.tsv --threads 40 --sintax_cutoff 0
 parser.add_argument('--output', help='VSEARCH-formatted output.')
 
 args = parser.parse_args()
